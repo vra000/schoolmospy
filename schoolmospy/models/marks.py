@@ -7,9 +7,9 @@ from pydantic import BaseModel
 
 class Grade(BaseModel):
     origin: str
-    five: float
-    ten: float
-    hundred: float
+    five: float | None = None
+    ten: float | None = None
+    hundred: float | None = None
 
 
 class Value(BaseModel):
