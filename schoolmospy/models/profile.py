@@ -8,13 +8,13 @@ from pydantic import BaseModel
 class _Profile(BaseModel):
     last_name: str
     first_name: str
-    middle_name: str
+    middle_name: str | None = None
     birth_date: str
     sex: str
     user_id: int
     id: int
-    phone: str
-    email: str
+    phone: str | None = None
+    email: str | None = None
     snils: str
     type: str
 
@@ -41,11 +41,11 @@ class Representative(BaseModel):
     person_id: str
     last_name: str
     first_name: str
-    middle_name: str
+    middle_name: str | None = None
     type_id: int
     type: str
-    email: str | None
-    phone: str
+    email: str | None = None
+    phone: str | None = None
     snils: str
 
 
@@ -59,13 +59,13 @@ class Section(BaseModel):
 class Child(BaseModel):
     last_name: str
     first_name: str
-    middle_name: str
+    middle_name: str | None = None
     birth_date: str
     sex: str
     user_id: int
     id: int
-    phone: str
-    email: str
+    phone: str | None = None
+    email: str | None = None
     snils: str
     type: Any
     school: School
